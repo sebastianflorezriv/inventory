@@ -24,9 +24,9 @@ public class ProductController {
     @GetMapping("/{idProduct}")
     public Product getProductById(@PathVariable int idProduct){
         if(repository.findById(idProduct).isPresent()){
-            return new Product();
-        } else{
             return repository.findById(idProduct).get();
+        } else{
+            return new Product();
         }
     }
 
