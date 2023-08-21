@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/products")
 @Setter
+@CrossOrigin("http://localhost:4200")
 public class ProductController {
 
     @Autowired
@@ -42,8 +43,8 @@ public class ProductController {
     }
 
     @DeleteMapping("/{idProduct}")
-    public String deleteProduct(@PathVariable int idProduct){
+    public Integer deleteProduct(@PathVariable int idProduct){
         repository.deleteById(idProduct);
-        return "Ok";
+        return idProduct;
     }
 }
