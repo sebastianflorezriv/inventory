@@ -26,7 +26,7 @@ public class ProductController {
         if(repository.findById(idProduct).isPresent()){
             return repository.findById(idProduct).get();
         } else{
-            return new Product();
+            return null;
         }
     }
 
