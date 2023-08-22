@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * MODELO/ENTIDAD
+ */
 @Table(name = "product")
 @Entity
 @Getter @Setter
